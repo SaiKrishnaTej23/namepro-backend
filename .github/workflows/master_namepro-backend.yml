@@ -50,4 +50,4 @@ jobs:
           app-name: 'namepro-backend'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F3539FE5F74940789000C74A56E0C4A5 }}
-          package: '*.war'
+          package: '*.jar'
