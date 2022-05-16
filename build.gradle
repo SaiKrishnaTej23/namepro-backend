@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.6.7'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id 'maven-publish'
 }
 
 group = 'com.wf'
@@ -46,3 +47,16 @@ dependencyManagement {
 tasks.named('test') {
     useJUnitPlatform()
 }
+
+publishing {
+    publications {
+        myPublicationName(MavenPublication) {
+            groupId = 'com.wf'
+            artifactId = 'namepro-backend'
+            version = '1.0.0-SNAPSHOT'
+
+            from components.java
+        }
+    }
+}
+
